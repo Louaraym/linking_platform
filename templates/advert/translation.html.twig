@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+{#    <h1>#}
+{#        Aujourd'hui nous sommes le {{ 'now'|localizeddate('full', 'none') }}#}
+{#        et il est {{ 'now'|localizeddate('none', 'short') }}#}
+{#    </h1>#}
+    <h1>
+        Nous sommes le {{ 'now'|date('d/m/Y H:i') }} <br>
+        {{ 'now'|date('l j F Y') }}
+    </h1>
+    <h1>
+        {{ 'Symfony.great'|trans }}
+    </h1>
+    <h2>
+        {{ translated }}
+    </h2>
+    {#        {{ 'Hello'|trans }} {{ name }} !#}
+    <p>
+        Avec le filtre
+        {{ 'hello'|trans({'%name%': name}) }}
+    </p>
+    <p>
+        Avec la balise :
+        {% trans with {'%name%': name} %} hello {% endtrans %}
+    </p>
+    <p>
+        Avec le serive
+        {{ hello }}
+    </p>
+    <p>
+        Avec un paramètre fixe
+        {{ 'hello'|trans({'%name%': 'moi-même'}) }}
+    </p>
+
+{#    Les noms qu'on a utilisé,%name%  pour le placeholder et {{ name }}  pour la variable Twig, #}
+{#    sont totalement indépendants. Vous auriez pu utiliser nom pour l'un et username pour l'autre par exemple !#}
+    <h1>
+        La gestion des pluriels
+    </h1>
+{#    <p>#}
+{#        Avec le filtre#}
+{#        {{ 'advert.nombre'|trans({'count': number}) }}#}
+{#    </p>#}
+
+{% endblock %}

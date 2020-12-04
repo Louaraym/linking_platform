@@ -1,0 +1,24 @@
+{% extends 'base_advert.html.twig' %}
+{% block title %}
+    {{ parent() }} - accueil
+{% endblock %}
+
+{% block advert_body %}
+    <h2 class="text-center">Liste des annonces</h2>
+    <p class="text-center">Il y a {{ adverts|length }} annonces</p>
+    <ul>
+        {% for advert in adverts %}
+            <li>
+                <a href="{{ path('advert_show', {'id': advert.id, 'slug': advert.slug}) }}">
+                    {{ advert.title }}
+                </a>
+{#                par {{ advert.author.firstName~ ' ' ~ advert.author.lastName }},#}
+                par {{ advert.author.fullName }},
+                le {{ advert.createdAt ? advert.createdAt|date('d/m/Y à H:i') : '' }}
+            </li>
+        {% else %}
+            <li>Pas (encore !) d'annonces</li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

@@ -1,0 +1,56 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark container-fluid sticky-top" style="margin-bottom: 10px;">
+    <a class="navbar-brand ml-5" href="{{ path('home') }}">Linking Platform</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item {% if app.request.get('_route') =='home' %} active {% endif %}">
+                <a class="nav-link"  href="{{ path('home') }}">Accueil</a>
+            </li>
+            <li class="nav-item {% if app.request.get('_route') =='advert_index' %} active {% endif %}">
+                <a class="nav-link"  href="{{ path('advert_index') }}">Annonces</a>
+            </li>
+            <li class="nav-item {% if app.request.get('_route') =='category_index' %} active {% endif %}">
+                <a class="nav-link"  href="{{ path('category_index') }}">Catégories</a>
+            </li>
+            <li class="nav-item {% if app.request.get('_route') =='skill_index' %} active {% endif %}">
+                <a class="nav-link"  href="{{ path('skill_index') }}">Compétences</a>
+            </li>
+            <li class="nav-item {% if app.request.get('_route') =='platform_traduction' %} active {% endif %}">
+                <a class="nav-link"  href="{{ path('platform_traduction', {'name': 'Raymond'}) }}">Traduction</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto mr-5">
+            {% if is_granted('ROLE_USER') %}
+                <li class="nav-item {% if app.request.get('_route') =='app_logout' %} active {% endif %}">
+                    <a class="nav-link"  href="{{ path('app_logout') }}"
+                       onclick="return confirm('Vous êtes sur le point de vous déconnecter.\n'+'Êtes-vous sûr de vouloir continuer ?')"
+                    >
+                        déconnexion
+                    </a>
+                </li>
+            {% else %}
+                <li class="nav-item {% if app.request.get('_route') =='app_register' %} active {% endif %}">
+                    <a class="nav-link"  href="{{ path('app_register') }}">Inscription</a>
+                </li>
+                <li class="nav-item {% if app.request.get('_route') =='app_login' %} active{% endif %}">
+                    <a class="nav-link" href="{{ path('app_login') }}">Mon Compte</a>
+                </li>
+            {% endif %}
+        </ul>
+    </div>
+</nav>
+{# this check prevents starting a session when there are no flash messages #}
+{% if app.request.hasPreviousSession %}
+    {% for label, messages in app.flashes %}
+        <div class="container">
+            <div class="alert alert-{{ label }} text-center">
+                {% for message in messages %}
+                    {{ message | raw }}
+                {% endfor %}
+            </div>
+        </div>
+    {% endfor %}
+{% endif %}

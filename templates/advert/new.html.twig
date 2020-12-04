@@ -1,0 +1,23 @@
+{% extends 'base_advert.html.twig' %}
+
+{% block title %}
+    {{ parent() }} - New Advert
+{% endblock %}
+
+{% block advert_body %}
+   <h1 class="text-center">Ajouter une nouvelle annonce</h1>
+
+   {{ include('advert/_form.html.twig') }}
+    <p class="mt-3">
+        Vous êtes sur le point de publier une annonce qui sera directement accéssible aux visiteurs de votre site
+    </p>
+   <a href="{{ path('advert_index') }}" class="btn btn-default mb-5">
+       <i class="fas fa-chevron-left"></i>
+       Retour à la liste
+   </a>
+{% endblock %}
+
+ {% block javascripts %}
+     {{ parent() }}
+{#     {{ encore_entry_script_tags('addCollectionType') }}#}
+ {% endblock %}

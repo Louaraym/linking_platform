@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %} Linking Platform{% endblock %}</title>
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+    </head>
+    <body>
+        {% include'partials/_header.html.twig' %}
+        <div class="jumbotron text-center">
+            <p class="lead">
+                {% trans %}
+                    This is a simple hero unit, a simple jumbotron-style component for calling extra attention
+                    to featured content or information.
+                {% endtrans %}
+            </p>
+            <hr class="my-4">
+            <p>
+                {% trans %}
+                    It uses utility classes for typography and spacing to space content out within the larger container.
+                {% endtrans %}
+            </p>
+            <a class="btn btn-danger btn-lg" href="{{ path('advert_purge',{days: days}) }}" role="button">{{ 'Purge adverts'|trans }}</a>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div id="menu" class="col-md-3">
+                    <h3>Les annonces</h3>
+                    <ul class=" nav-pills nav-stacked">
+                        <li>
+                            <a href="{{ path('advert_index') }}">
+                                Accueil
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ path('advert_new') }}">
+                                Ajouter une annonce
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ path('advert_last_days', {days: 25}) }}">
+                                Derniers jours
+                            </a>
+                        </li>
+                    </ul>
+                    <h4>Dernières annonces</h4>
+                    {{ render(controller("App\\Controller\\AdvertController::recentAdverts", {'limit': 3})) }}
+                </div>
+                <div id="content" class="col-md-9">
+                    {% block body %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+    </body>
+</html>

@@ -1,0 +1,45 @@
+<div class="well">
+    {# form_start() affiche la balise d'ouverture du formulaire html, soit <form> #}
+    {{ form_start(form, {'attr': {'class': 'form-horizontal'} } ) }}
+
+    {# Les erreurs générées du formulaire, form_errors() affiche les erreurs du champ donné en argument #}
+    {{ form_errors(form) }}
+
+    {# Génération du label + error + widget pour un champ #}
+    {# form_row() affiche le label, les erreurs et le champ en même temps,
+        en respectant la vue définit dans le thème du formulaire que vous utilisez #}
+    {{ form_row(form.title, {'label': 'Titre', 'help': "Donnez un titre accrocheur", 'attr': {'placeholder': "Saisir le titre de l'annonce ici"} } ) }}
+
+    {# Génération manuelle et éclatée : #}
+    <div class="form-group">
+        {# Génération du label. form_label() affiche le label du champ donné en argument #}
+        {{ form_label(form.content, "Contenu de l'annonce", {'label_attr': {'class': 'control-label'}}) }}
+
+        {# Affichage des erreurs pour ce champ précis. #}
+        {{ form_errors(form.content) }}
+
+{#        <div class="col-sm-10">#}
+            {# Génération de l'input. form_widget() affiche le champ donné en argument #}
+            {{ form_widget(form.content, {'attr': {'placeholder': "Saisir le contenu de l'annonce ici",'class': 'form-control'} } ) }}
+            {{ form_help(form.content, {'help': "Dites nous tout sur votre annonce"}) }}
+{#        </div>#}
+    </div>
+    {{ form_row(form.categories) }}
+{#    <a href="#" id="add_category" class="btn btn-primary">
+        <i class="fas fa-plus"></i> Ajouter une catégorie
+    </a>#}
+{#   {{ form_row(form.content, {'label': 'Contenu', 'attr': {'placeholder': "Saisir le contenu de l'annonce ici"} } ) }}#}
+
+    {# form_resr() affiche tous les champs manquants du formulaire y compris les champs cachés
+        comme le champ CSRF nommé _token #}
+    {{ form_rest(form) }}
+
+    {# Ajout du bouton de soumission #}
+    <button class="btn btn-success">
+        <i class="fas fa-save"></i>
+        {{ button_label|default('Save') }}
+    </button>
+
+    {# form_end()  affiche la balise de fermeture du formulaire HTML, soit </form> #}
+    {{ form_end(form) }}
+</div>

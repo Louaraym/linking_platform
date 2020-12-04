@@ -1,0 +1,13 @@
+{% extends 'base_application.html.twig' %}
+
+{% block application_body %}
+    <h2 class="text-center">Candidature pour l'annonce : {{ advert.title }}</h2>
+    <div class="well">
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <button class="btn btn-success">
+            {{ button_label|default('Soumettre votre candidature') }}
+        </button>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

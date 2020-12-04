@@ -1,0 +1,11 @@
+framework:
+    # On initialise la locale de requête, celle par défaut pour
+    # l'internaute arrivant pour la toute première fois sur notre site
+    default_locale: "%locale%"
+    translator:
+        default_path: '%kernel.project_dir%/translations'
+        # On définit la langue par défaut pour le service de traduction
+        # Ce qui n'est pas disponible dans la locale de l'utilisateur
+        # sera affiché dans celle spécifiée ici
+        fallbacks:
+              - "%locale%"

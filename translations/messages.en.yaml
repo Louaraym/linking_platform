@@ -1,0 +1,6 @@
+hello: 'Hello %name%!'
+'All about translation with symfony': 'All about translation with symfony'
+"This is a simple hero unit, a simple jumbotron-style component for calling extra attention\n                    to featured content or information.": "This is a simple hero unit, a simple jumbotron-style component for calling extra attention\n                    to featured content or information."
+'It uses utility classes for typography and spacing to space content out within the larger container.': 'It uses utility classes for typography and spacing to space content out within the larger container.'
+'Learn more': 'Learn more'
+Symfony.great: Symfony is great

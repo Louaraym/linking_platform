@@ -1,0 +1,9 @@
+<ul class="nav nav-pills nav-stacked">
+    {% for advert in recentAdverts %}
+        <li>
+            <a href="{{ path('advert_show', {'id': advert.id, 'slug': advert.slug}) }}">
+                {{ advert.title }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>

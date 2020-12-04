@@ -1,0 +1,28 @@
+{% extends 'base_advert.html.twig' %}
+
+{% block title %}
+    {{ parent() }} - edit
+t{% endblock %}
+
+{% block advert_body %}
+    <h1 class="text-center">Editer l'annonce N°{{ advert.id }}</h1>
+
+    {{ include('advert/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <p class="mt-3">
+        Vous éditez une annonce déjà existante, merci de ne pas changer
+        l'esprit général de l'annonce déjà publiée.
+    </p>
+
+    <p>
+        <a href="{{ path('advert_show', {'id': advert.id, 'slug': advert.slug}) }}" class="btn btn-default">
+            <i class="fas fa-chevron-left"></i>
+            Retour à l'annonce
+        </a>
+    </p>
+{% endblock %}
+
+ {% block javascripts %}
+     {{ parent() }}
+{#     {{ encore_entry_script_tags('addCollectionType') }}#}
+ {% endblock %}
