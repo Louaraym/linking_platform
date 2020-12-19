@@ -13,152 +13,34 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dbc73a59-80fd-4087-a3da-c64c08043e33" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/linking_platform.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/app.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/addCollectionType.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/assets.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/dev/monolog.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/dev/web_profiler.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/doctrine.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/doctrine_migrations.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/mailer.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/prod/deprecations.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/prod/doctrine.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/prod/monolog.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/prod/webpack_encore.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/sensio_framework_extra.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/stof_doctrine_extensions.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/test/monolog.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/test/twig.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/test/validator.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/test/web_profiler.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/test/webpack_encore.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/translation.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/twig.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/validator.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/webpack_encore.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/routes/annotations.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/routes/dev/web_profiler.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20200815180505.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20200815182641.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20200821124331.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20200821150152.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20200822144724.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20200822162958.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20200824211040.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20200825142055.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20200826145736.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20200904115259.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20200922183829.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20200923115022.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Bigbrother/MessageListener.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Bigbrother/MessageNotificator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/AdvertController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/ApplicationController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/CategoryController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/RegistrationController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/SkillController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DoctrineEventsListeners/AdvertViewListener.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DoctrineEventsListeners/ApplicationCreationListener.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Advert.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/AdvertSkill.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Application.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Category.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Image.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Skill.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/View.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Event/MessagePostEvent.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Event/PlatformEvents.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/AdvertEditType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/AdvertType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/ApplicationType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/Category1Type.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/CkeditorType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/ImageType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/RegistrationFormType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/Skill1Type.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/KernelEventsListeners/BetaListener.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/KernelEventsListeners/ControllerListener.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/AdvertRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/AdvertSkillRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/ApplicationRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/CategoryRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/ImageRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/SkillRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/UserRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/ViewRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Security/SecurityAuthenticator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Service/AddView.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Service/AdvertPurger.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Service/Antispam.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Service/ApplicationMailer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Service/BetaHtmlAdder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TwigExtension/AntispamExtension.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Validator/Antiflood.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Validator/AntifloodValidator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/advert/_delete_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/advert/_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/advert/_recent_adverts.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/advert/edit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/advert/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/advert/last_days.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/advert/new.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/advert/show.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/advert/translation.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/application/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/application/new.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/base_advert.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/base_application.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/category/_delete_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/category/_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/category/edit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/category/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/category/new.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/category/show.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/partials/_header.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/registration/register.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/skill/_delete_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/skill/_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/skill/edit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/skill/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/skill/new.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/skill/show.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/translations/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/translations/messages.en.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/translations/messages.fr.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/translations/security.en.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/translations/security.fr.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/translations/validators.en.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/translations/validators.fr.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+    <list default="true" id="dbc73a59-80fd-4087-a3da-c64c08043e33" name="Default Changelist" comment="project update">
+      <change afterPath="$PROJECT_DIR$/config/packages/fos_ckeditor.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/linking_platform.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/linking_platform.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes/annotations.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes/annotations.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Bigbrother/MessageListener.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bigbrother/MessageListener.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AdvertController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdvertController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Advert.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Advert.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/AdvertType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/AdvertType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/KernelEventsListeners/BetaListener.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/KernelEventsListeners/BetaListener.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/CategoryRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/CategoryRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/BetaHtmlAdder.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/BetaHtmlAdder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Validator/AntifloodValidator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Validator/AntifloodValidator.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/partials/_header.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partials/_header.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -274,6 +156,8 @@
       <path value="$PROJECT_DIR$/vendor/symfony/translation" />
       <path value="$PROJECT_DIR$/vendor/twig/extra-bundle" />
       <path value="$PROJECT_DIR$/vendor/twig/intl-extra" />
+      <path value="$PROJECT_DIR$/vendor/symfony/expression-language" />
+      <path value="$PROJECT_DIR$/vendor/friendsofsymfony/ckeditor-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1g2SnVkwnCUOi4ljY8DGNKi6d7D" />
@@ -285,7 +169,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.jetbrains.php.lang.actions.generation.PhpGenerateFieldAccessorHandlerBase$MyMemberChooser.fluent.setters.last.selected" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../mini_airbnb" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="Symfony2.SettingsForm" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -370,8 +254,31 @@
       <workItem from="1605953391713" duration="2831000" />
       <workItem from="1606594044341" duration="1350000" />
       <workItem from="1606597196222" duration="1992000" />
-      <workItem from="1607081423047" duration="3232000" />
+      <workItem from="1607081423047" duration="17180000" />
+      <workItem from="1607176905242" duration="2150000" />
+      <workItem from="1607185495255" duration="6519000" />
+      <workItem from="1607262703585" duration="834000" />
+      <workItem from="1607264103334" duration="9027000" />
+      <workItem from="1607336884354" duration="4956000" />
+      <workItem from="1607359906400" duration="699000" />
+      <workItem from="1607427078128" duration="7766000" />
+      <workItem from="1607440100573" duration="4905000" />
+      <workItem from="1607509823173" duration="21016000" />
+      <workItem from="1607558544844" duration="362000" />
+      <workItem from="1607601290964" duration="4926000" />
+      <workItem from="1607690307565" duration="12561000" />
+      <workItem from="1607788108236" duration="3864000" />
+      <workItem from="1607952810840" duration="3569000" />
+      <workItem from="1608109164588" duration="1216000" />
     </task>
+    <task id="LOCAL-00001" summary="project update">
+      <created>1607086568771</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1607086568771</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -391,5 +298,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="project update" />
+    <option name="LAST_COMMIT_MESSAGE" value="project update" />
   </component>
 </project>

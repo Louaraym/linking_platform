@@ -6,6 +6,7 @@ namespace App\Bigbrother;
 
 use App\Event\MessagePostEvent;
 
+
 class MessageListener
 {
     protected $notificator;
@@ -27,7 +28,6 @@ class MessageListener
     public function onLinkingPlatformPostMessage(MessagePostEvent $event): void
     {
         if (in_array($event->getUser()->getUsername(), $this->listUsers, true)) {
-
             $this->notificator->notifyByEmail($event->getMessage(), $event->getUser());
         }
     }

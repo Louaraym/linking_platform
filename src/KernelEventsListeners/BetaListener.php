@@ -33,18 +33,15 @@ class BetaListener
 
     public function onKernelResponse(ResponseEvent $event): void
     {
-        $remainingDays = $this->endDate->diff(new \Datetime())->days;
-        //dd($remainingDays);
+        $origin = new DateTime('Today');
+        $target = $this->endDate;
+        $remainingDays = $origin->diff($target)->days;
 
-        if ($remainingDays <= 0) {
-            // Si la date est dépassée, on ne fait rien
-            return;
-        }
+        // Si la date est dépassée, on ne fait rien
+        if ($origin >= $target) { return; }
 
         // On teste si la requête est bien la requête principale (et non une sous-requête)
-        if (!$event->isMasterRequest()) {
-            return;
-        }
+        if (!$event->isMasterRequest()) { return; }
 
         // On récupère la réponse que le gestionnaire a insérée dans l'évènement
         $response = $event->getResponse();
@@ -55,10 +52,8 @@ class BetaListener
         // Puis on insère la réponse modifiée dans l'évènement
         $event->setResponse($newResponse);
 
-
-        //On stop la propagation de l'évènement en cours, ( ici kernel.response )
+        /* On stop la propagation de l'évènement en cours, ( ici kernel.response )
+            cela empêche les listeners de priorité inférieure au stopeur de s'exécuter*/
         //$event->stopPropagation();
-
-
     }
 }

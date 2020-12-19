@@ -19,17 +19,10 @@ class BetaHtmlAdder
         $content = $response->getContent();
 
         // Code à rajouter
-        // (Je mets ici du CSS en ligne, mais il faudrait utiliser un fichier CSS bien sûr !)
-        $html = '<div style="position: fixed; top: 55px; background: orange; width: 100%; text-align: center; padding: 0.5em;">
-                    Beta J-'.(int) $remainingDays.' ! 
-                </div>';
+        $html = '<div class="beta-html-adder">Beta J - ' .$remainingDays. ' !</div>';
 
         // Insertion du code dans la page, au début du <body>
-        $content = str_replace(
-            '<body>',
-            '<body> '.$html,
-            $content
-        );
+        $content = str_replace('<body>','<body> '.$html, $content);
 
         // Modification du contenu dans la réponse
         $response->setContent($content);

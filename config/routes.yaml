@@ -1,3 +1,12 @@
-#home:
-#    path: /
-#    controller: App\Controller\HomeController::index
+# These lines define a route using YAML configuration. The controller used by
+# the route (FrameworkBundle:Template:template) is a convenient shortcut when
+# the template can be rendered without executing any logic in your own controller.
+# See https://symfony.com/doc/current/templates.html#rendering-a-template-directly-from-a-route
+home:
+  path: /{_locale}
+  controller: App\Controller\HomeController::index
+  requirements:
+    _locale: '%app_locales%'
+  defaults:
+    template: home/index.html.twig
+    _locale: '%locale%'

@@ -42,7 +42,7 @@ class CategoryRepository extends ServiceEntityRepository
         $qb = $this->createQueryBuilder('c');
 
         return $qb
-            ->where($qb->expr()->in('c.name LIKE :pattern', $pattern))
+            ->andWhere($qb->expr()->in('c.name LIKE :pattern', $pattern))
             ;
     }
 

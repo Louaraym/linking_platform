@@ -40,13 +40,13 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{ path('advert_last_days', {days: 25}) }}">
+                            <a href="{{ path('advert_last_days', {days: days}) }}">
                                 Derniers jours
                             </a>
                         </li>
                     </ul>
                     <h4>Dernières annonces</h4>
-                    {{ render(controller("App\\Controller\\AdvertController::recentAdverts", {'limit': 3})) }}
+                    {{ render(controller("App\\Controller\\AdvertController::recentAdverts", {'limit': 5})) }}
                 </div>
                 <div id="content" class="col-md-9">
                     {% block body %}

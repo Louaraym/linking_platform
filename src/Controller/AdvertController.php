@@ -22,6 +22,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Validator\Validator\ValidatorInterface;
 use Symfony\Contracts\EventDispatcher\EventDispatcherInterface;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
@@ -89,7 +90,7 @@ class AdvertController extends AbstractController
     public function recentAdverts(AdvertRepository $advertRepository, $limit): Response
     {
         return $this->render('advert/_recent_adverts.html.twig', [
-            'recentAdverts' => $advertRepository->findBy(['published' => true], ['id' => 'desc'], 5)
+            'recentAdverts' => $advertRepository->findBy(['published' => true], ['id' => 'desc'], $limit)
         ]);
     }
 
@@ -129,17 +130,26 @@ class AdvertController extends AbstractController
 
     /**
      * @Route("/new", name="advert_new", methods={"GET","POST"})
+     * @param ValidatorInterface $validator
      * @param EventDispatcherInterface $eventDispatcher
      * @param Request $request
      * @param EntityManagerInterface $entityManager
      * @param Antispam $antispam
      * @return Response
      */
-    public function new(EventDispatcherInterface $eventDispatcher, Request $request, EntityManagerInterface $entityManager, Antispam $antispam): Response
+    public function new(ValidatorInterface $validator, EventDispatcherInterface $eventDispatcher, Request $request, EntityManagerInterface $entityManager, Antispam $antispam): Response
     {
         $advert = new Advert();
         $form = $this->createForm(AdvertType::class, $advert);
         $form->handleRequest($request);
+
+       /* $violations = $validator->validate($form->getData());
+
+        if (0 !== count($violations)) {
+            return new Response((string) $violations);
+        }else{
+            return new Response("L'annonce est valide !");
+        }*/
 
         if ($form->isSubmitted() && $form->isValid()) {
 

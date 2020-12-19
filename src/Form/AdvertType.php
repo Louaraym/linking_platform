@@ -16,6 +16,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\FormEvent;
 use Symfony\Component\Form\FormEvents;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+//use FOS\CKEditorBundle\Form\Type\CKEditorType;
 
 class AdvertType extends AbstractType
 {
@@ -23,10 +24,10 @@ class AdvertType extends AbstractType
     {
         // Arbitrairement, on récupère toutes les catégories qui commencent par "D"
         $pattern = 'D%';
-//        $pattern = ['D%', 'R%'];
+       //$pattern = ['D%','R%'];
 
         $builder
-//            ->add('createdAt', DateTimeType::class)
+ //           ->add('createdAt', DateTimeType::class)
             ->add('title', TextType::class, [
                 'label' => "Titre de l'annonce",
             ])
@@ -34,19 +35,16 @@ class AdvertType extends AbstractType
                 'label' => "Contenu de l'annonce",
                 'attr' => [
                     'rows' => 10
-                ]
+                ],
             ])
             ->add('categories', EntityType::class, [
                     'class' => Category::class,
                     'choice_label' => 'name',
                     'multiple' => true,
                     'expanded' => true,
-                  /* 'query_builder' => static function(CategoryRepository $repository) use($pattern) {
+                  'query_builder' => static function(CategoryRepository $repository) use($pattern) {
                         return $repository->getLikeQueryBuilder($pattern);
-                    },*/
-                   /* 'query_builder' => static function(CategoryRepository $repository) use($pattern) {
-                        return $repository->getCategoriesQueryBuilder($pattern);
-                    }*/
+                    },
             ])
 /*            ->add('categories', CollectionType::class, [
                     'entry_type' => Category1Type::class,
@@ -63,9 +61,9 @@ class AdvertType extends AbstractType
         ;
 
         // On ajoute une fonction qui va écouter un évènement
-       /* La fonction qui est exécutée par l'évènement prend en argument l'évènement lui-même, la variable$event.
-        Depuis cet objet évènement, vous pouvez récupérer d'une part l'objet sous-jacent, via$event->getData(),
-        et d'autre part le formulaire, via$event->getForm()*/
+       /* La fonction qui est exécutée par l'évènement prend en argument l'évènement lui-même, la variable $event.
+        Depuis cet objet évènement, vous pouvez récupérer d'une part l'objet sous-jacent, via $event->getData(),
+        et d'autre part le formulaire, via $event->getForm()*/
         $builder->addEventListener(
             FormEvents::PRE_SET_DATA,    // 1er argument : L'évènement qui nous intéresse : ici, PRE_SET_DATA
             static function(FormEvent $event) { // 2e argument : La fonction à exécuter lorsque l'évènement est déclenché
@@ -93,8 +91,8 @@ class AdvertType extends AbstractType
     /*Je reviens sur la conditionif (null == $advert) dans la fonction. En fait, à la première création du formulaire,
     celui-ci exécute sa méthode setData() avec null en argument.
     Cette occurrence de l'évènementPRE_SET_DATAne nous intéresse pas, d'où la condition pour sortir de la fonction
-    lorsque$event->getData()vautnull. Ensuite, lorsque le formulaire récupère l'objet ($advert dans notre cas)
-    sur lequel se construire, il réexécute sa méthodesetData()avec l'objet en argument.
+    lorsque$event->getData() vaut null. Ensuite, lorsque le formulaire récupère l'objet ($advert dans notre cas)
+    sur lequel se construire, il réexécute sa méthode setData() avec l'objet en argument.
     C'est cette occurrence-là qui nous intéresse.*/
 
     public function configureOptions(OptionsResolver $resolver): void
